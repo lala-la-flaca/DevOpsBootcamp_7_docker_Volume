@@ -67,6 +67,10 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
    
 7. Restart the containers.
    
+   ```bash
+   docker compose -f docker-compose.yaml down
+   ```
+   
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_Volume/blob/main/Img/RestartingContainers.png" width=800 />
    
 8. Verify that the data has persisted.
