@@ -1,5 +1,5 @@
 # 🐳 Persisting Data with Docker Volumes
-This demo project is part of Module 7: Containers with Docker from the Nana DevOps Bootcamp. It focuses on using Docker Volumes to persist data in a MongoDB container, ensuring that the database data is retained even after restarting the container.
+This demo project is part of Module 7: Containers with Docker from the Nana DevOps Bootcamp. It focuses on using Docker Volumes to persist data in a MongoDB container, ensuring that the database data is retained even after restarting containers.
 
 ## 🚀 Technologies Used
 
@@ -30,9 +30,9 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
         driver: local
     ```
     
-    <img src="" width=500 />
+    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_Volume/blob/main/Img/DefiningVolumeDockerComposeFile.png" width=800 />
     
-2. Add the volume to the service. In this example, attach it to the MongoDB service.
+2. Add the volume to the service. In this example, attach the volume to the MongoDB service.
     ```bash
       volumes:
       - mongo-data:/data/db
@@ -43,21 +43,27 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
    /data/db
    ```
    
-   <img src="" width=500 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_Volume/blob/main/Img/AddingTheVolumetoService.png" width=800 />
    
-3. Access Mongo-Express, create a database named user-account, and add a collection called users.
+3. Run docker-compose command to run the containers.
+
+   ```bash
+   docker compose -f docker-compose.yaml up
+   ```
    
-   <img src="" width=500 />
+5. Access Mongo-Express, create a database named user-account, and add a collection called users.
    
-4. Go to the application and update the user profile.
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_Volume/blob/main/Img/CreatingDatabaseandCollection.png" width=800 />
    
-   <img src="" width=500 />
+6. Go to the application and update the user profile.
    
-5. Restart the containers.
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_Volume/blob/main/Img/UdatinUserinApp.png" width=800 />
    
-   <img src="" width=500 />
+7. Restart the containers.
    
-6. Verify that the data has persisted.
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_Volume/blob/main/Img/RestartingContainers.png" width=800 />
+   
+8. Verify that the data has persisted.
     
-   <img src="" width=500 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_Volume/blob/main/Img/DataPersisted.png" width=800 />
     
