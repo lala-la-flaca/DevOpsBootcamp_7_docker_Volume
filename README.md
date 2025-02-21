@@ -45,7 +45,13 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
    
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_Volume/blob/main/Img/AddingTheVolumetoService.png" width=800 />
    
-3. Run docker-compose command to run the containers.
+3. Run the NodeJS application
+   ```bash
+    npm install
+    node server.js
+   ```
+
+4. Run docker-compose command to run the containers.
 
    ```bash
    docker compose -f docker-compose.yaml up
